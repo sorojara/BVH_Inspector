@@ -1,0 +1,125 @@
+% Universidad de Costa Rica
+% Escuela de Ingeniería Eléctrica
+% IE0499: Proyecto Eléctrico. 
+% Primer semestre, 2016
+
+% Título: Desarrollo de un software para el análisis de variables cinemáticas y espacio-temprales de la marcha
+% Autor: Luis Guillermo Cornejo Suárez luis.cornejo@ucr.ac.cr
+% Supervisores: Dr. rer. nat. Francisco Siles Canales francisco.siles@ucr.ac.cr
+%               Ing. Andrés Mora Zúñiga amora@eie.ucr.ac.cr
+%               Bach. Ana María Gomez Granados
+
+% ==== Preambulo ====
+
+\documentclass[11pt, letterpaper, twoside, openright]{book}
+
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{SIunits}
+\usepackage{geometry}
+\usepackage{natbib}
+\usepackage{longtable}
+\usepackage{caption}
+
+\usepackage{nameref}
+\usepackage{color}
+
+\bibliographystyle{apalike_es}
+\setcounter{secnumdepth}{1} % Solo numera capítulos y secciones
+\newcommand{\newchap}[1]{\include{#1} \clearpage{\pagestyle{empty}\cleardoublepage}}
+\newcommand{\comentario}[1]{{\color{red} #1}}
+\newcommand{\mono}[1]{{\ttfamily #1}}
+\newcommand{\equwref}[1]{(\ref{#1})}
+% ==== Inicio del informe ==== 
+\begin{document}
+\frontmatter
+\pagestyle{plain}
+
+% ---- Portada ----
+\thispagestyle{empty}
+\newgeometry{margin=2cm}
+\begin{center}
+     \Large\textsc{Universidad de Costa Rica \\ Facultad de Ingeniería \\ Escuela de Ingeniería Eléctrica} \\
+    \vspace{6cm}
+    \LARGE\bfseries{Desarrollo de una infraestructura de software para el análisis de variables cinemáticas y espacio-temporales de la marcha} \\
+    \vspace{2cm}
+    \large\normalfont{Por:} \\
+    \vspace{0.5cm}
+    \Large\normalfont{Luis Guillermo Cornejo Suárez} \\
+%    \vspace{9cm}
+    \vfill
+    \large{Ciudad Universitaria Rodrigo Facio Brenes}\\
+    \vspace{0.5cm}
+    \large{Agosto 2016}
+\end{center}
+\newpage\null\thispagestyle{empty}\newpage
+
+% ---- Aprobación ----
+\thispagestyle{empty}
+\begin{center}
+    \LARGE\bfseries{Desarrollo de una infraestructura de software para el análisis de variables cinemáticas y espacio-temporales de la marcha} \\
+    \vspace{2cm}
+    \large\normalfont{Por:} \\
+    \vspace{0.5cm}
+    \Large\normalfont{Luis Guillermo Cornejo Suárez} \\
+    \vfill
+    \large\bfseries{IE0499 - Proyecto Eléctrico} \\
+    \vspace{0.5cm}
+    \large\normalfont{Aprobado por el Tribunal:} \\
+    \vspace{4cm}
+    \rule{6cm}{0.1pt}\\
+    \normalfont\large{Dr. rer. nat. Francisco Siles Canales} \\
+    \normalfont\large{Profesor guía} \\
+    \vspace{2cm} 
+    \begin{table}[!h]
+        \centering
+        \begin{tabular}{cc}
+            \rule{6cm}{0.1pt}  & \rule{6cm}{0.1pt} \\
+            Ing. Andrés Mora Zúñiga & Bach. Ana María Gomez Granados \\
+            Profesor lector         & Profesora lector \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\restoregeometry
+
+% ---- Resument ----
+\include{resumen}
+
+% ---- Índices ----
+\tableofcontents
+\listoffigures
+\listoftables
+
+% ---- Cuerpo del trabajo ----
+\mainmatter
+\pagestyle{fancy}
+
+\newchap{introduccion}
+
+\newchap{generalidades}
+
+\newchap{variables-tecnicas}
+
+\newchap{solucion_propuesta}
+
+\newchap{eval_solucion}
+
+\newchap{conclusiones}
+
+% ---- apéndices ----
+\appendix 
+
+\newchap{apendices}
+
+% ---- Bibliografía ----
+\bibliography{referencias}
+
+\end{document}
